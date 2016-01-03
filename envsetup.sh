@@ -149,6 +149,7 @@ function setpaths()
     gccprebuiltdir=$(get_abs_build_var ANDROID_GCC_PREBUILTS)
 
     # defined in core/config.mk
+    arcversion=$(get_build_var ARC_VERSION)
     paclowramdevice=$(get_build_var PAC_LOW_RAM_DEVICE)
     targetcustomsysformat=$(get_build_var TARGET_CUSTOM_SYSTEM_FORMAT)
     targetgccversion=$(get_build_var TARGET_GCC_VERSION)
@@ -158,6 +159,7 @@ function setpaths()
     export TARGET_GCC_VERSION=$targetgccversion
     export TARGET_CUSTOM_SYSTEM_FORMAT=$targetcustomsysformat
     export PAC_LOW_RAM_DEVICE=$paclowramdevice
+    export ARC_VERSION=$arcversion
 
     # The gcc toolchain does not exists for windows/cygwin. In this case, do not reference it.
     export ANDROID_TOOLCHAIN=
